@@ -13,7 +13,7 @@ To install the custom node `ComfyUI-Virtual-Webcam`, you can use your command/te
 1. Navigate to your `ComfyUI/custom_nodes` folder.
 2. Run,
 ```bash
-git clone https://github.com/todo.git
+git clone https://github.com/Sean-Bradley/ComfyUI-Virtual-Webcam.git
 ```
 3. Restart ComfyUI
 
