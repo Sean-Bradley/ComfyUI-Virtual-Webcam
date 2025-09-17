@@ -23,6 +23,30 @@ You will find the node in your Nodes tab under SBCODE.
 
 Or you can double click the workspace and search for `virtual`
 
+## How to Use
+
+1. Copy Paste the [basic workflow](#basic-workflow) below into ComfyUI.
+
+2. Select the input webcam. Do not select "OBS Virtual Camera". This will be used as the output later.
+
+![./img/select-input.jpg](./img/select-input.jpg)
+
+3. Select `Run (Instant)` from the drop down.
+
+![./img/run-instant.jpg](./img/run-instant.jpg)
+
+4. To start, press the `(Run Instant)` button.
+
+![./img/run-instant.jpg](./img/tap-again.jpg)
+
+5. In your broadcasting or collaboration softwae, select `OBS Virtual Camera` as your webcam input.
+
+![./img/select-obs.jpg](./img/select-obs.jpg)
+
+6. To Stop, press the red square.
+
+![./img/red-square.jpg](./img/red-square.jpg)
+
 ## Basic Workflow
 
 ```json
@@ -142,27 +166,3 @@ Or you can double click the workspace and search for `virtual`
   }
 }
 ```
-
-## How to Use
-
-1. Copy Paste workflow into ComfyUI
-
-2. Select the input webcam. Do not select "OBS Virtual Camera". This will be used as the output later.
-
-![./img/select-input.jpg](./img/select-input.jpg)
-
-3. Select `Run (Instant)` from the drop down.
-
-![./img/run-instant.jpg](./img/run-instant.jpg)
-
-4. To start, press the `(Run Instant)` button.
-
-![./img/run-instant.jpg](./img/tap-again.jpg)
-
-5. In your broadcasting or collaboration softwae, select `OBS Virtual Camera` as your webcam input.
-
-![./img/select-obs.jpg](./img/select-obs.jpg)
-
-6. To Stop, press the red square.
-
-![./img/red-square.jpg](./img/red-square.jpg)
