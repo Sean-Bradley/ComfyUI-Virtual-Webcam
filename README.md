@@ -1,4 +1,4 @@
-# ComfyUI-Virtual-Webcam
+# ComfyUI Virtual Webcam
 
 A Virtual Camera Output For ComfyUI.
 
