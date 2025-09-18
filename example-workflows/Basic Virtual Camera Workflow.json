@@ -1,157 +1,568 @@
 {
-  "8": {
-    "inputs": {
-      "samples": [
-        "31",
-        0
+  "id": "00000000-0000-0000-0000-000000000000",
+  "revision": 0,
+  "last_node_id": 31,
+  "last_link_id": 28,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1710,
+        130
       ],
-      "vae": [
-        "25",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "10": {
-    "inputs": {
-      "image": "webcam/1758140880323.png [temp]",
-      "width": 480,
-      "height": 360,
-      "capture_on_queue": true
-    },
-    "class_type": "WebcamCapture",
-    "_meta": {
-      "title": "Webcam Capture"
-    }
-  },
-  "13": {
-    "inputs": {
-      "images": [
-        "18",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "18": {
-    "inputs": {
-      "fps": 30,
-      "continuous": true,
-      "stop_stream": false,
-      "image": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "VirtualCamNode",
-    "_meta": {
-      "title": "Virtual Camera Output"
-    }
-  },
-  "25": {
-    "inputs": {
-      "ckpt_name": "v1-5-pruned-emaonly-fp16.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
-  },
-  "26": {
-    "inputs": {
-      "lora_name": "LCM_LoRA_SD15.safetensors",
-      "strength_model": 1,
-      "strength_clip": 1,
-      "model": [
-        "25",
-        0
+      "size": [
+        140,
+        46
       ],
-      "clip": [
-        "25",
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 15
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 10,
+      "type": "WebcamCapture",
+      "pos": [
+        100,
+        130
+      ],
+      "size": [
+        270,
+        184
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "WebcamCapture"
+      },
+      "widgets_values": [
+        "",
+        480,
+        360,
+        true,
+        "capture"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "PreviewImage",
+      "pos": [
+        2320,
+        130
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 17
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 18,
+      "type": "VirtualCamNode",
+      "pos": [
+        1950,
+        130
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "Sean-Bradley/ComfyUI-Virtual-Webcam",
+        "ver": "c7d05a91b8bc7695de2c0780066dd014cda5291d",
+        "Node name for S&R": "VirtualCamNode"
+      },
+      "widgets_values": [
+        30,
+        true,
+        false
+      ]
+    },
+    {
+      "id": 25,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        100,
+        444
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            20
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            16,
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "v1-5-pruned-emaonly-fp16.safetensors"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "LoraLoader",
+      "pos": [
+        470,
+        130
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 19
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            25
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            23,
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "LCM_LoRA_SD15.safetensors",
+        1,
         1
       ]
     },
-    "class_type": "LoraLoader",
-    "_meta": {
-      "title": "Load LoRA"
-    }
-  },
-  "27": {
-    "inputs": {
-      "pixels": [
-        "10",
-        0
+    {
+      "id": 27,
+      "type": "VAEEncode",
+      "pos": [
+        470,
+        386
       ],
-      "vae": [
-        "25",
-        2
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 21
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "VAEEncode"
+      }
+    },
+    {
+      "id": 29,
+      "type": "CLIPTextEncode",
+      "pos": [
+        840,
+        130
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "alien"
       ]
     },
-    "class_type": "VAEEncode",
-    "_meta": {
-      "title": "VAE Encode"
-    }
-  },
-  "29": {
-    "inputs": {
-      "text": "alien",
-      "clip": [
-        "26",
-        1
+    {
+      "id": 30,
+      "type": "CLIPTextEncode",
+      "pos": [
+        840,
+        460
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark"
       ]
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+    {
+      "id": 31,
+      "type": "KSampler",
+      "pos": [
+        1340,
+        130
+      ],
+      "size": [
+        270,
+        474
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 25
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 26
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 27
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        1,
+        1,
+        "lcm",
+        "sgm_uniform",
+        0.5
+      ]
     }
-  },
-  "30": {
-    "inputs": {
-      "text": "text, watermark",
-      "clip": [
-        "26",
-        1
+  ],
+  "links": [
+    [
+      15,
+      31,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      16,
+      25,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      17,
+      18,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      8,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      25,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      20,
+      25,
+      1,
+      26,
+      1,
+      "CLIP"
+    ],
+    [
+      21,
+      10,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      25,
+      2,
+      27,
+      1,
+      "VAE"
+    ],
+    [
+      23,
+      26,
+      1,
+      29,
+      0,
+      "CLIP"
+    ],
+    [
+      24,
+      26,
+      1,
+      30,
+      0,
+      "CLIP"
+    ],
+    [
+      25,
+      26,
+      0,
+      31,
+      0,
+      "MODEL"
+    ],
+    [
+      26,
+      29,
+      0,
+      31,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      27,
+      30,
+      0,
+      31,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      28,
+      27,
+      0,
+      31,
+      3,
+      "LATENT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6670694864048369,
+      "offset": [
+        -6.43634656338393,
+        -26.22164671866484
       ]
     },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
+    "frontendVersion": "1.25.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
   },
-  "31": {
-    "inputs": {
-      "seed": 0,
-      "steps": 1,
-      "cfg": 1,
-      "sampler_name": "lcm",
-      "scheduler": "sgm_uniform",
-      "denoise": 0.5,
-      "model": [
-        "26",
-        0
-      ],
-      "positive": [
-        "29",
-        0
-      ],
-      "negative": [
-        "30",
-        0
-      ],
-      "latent_image": [
-        "27",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  }
+  "version": 0.4
 }
