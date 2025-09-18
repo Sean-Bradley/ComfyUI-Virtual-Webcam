@@ -8,7 +8,7 @@ Then in your other webcam capable applications, such as Google Meet, Teams, Zoom
 
 ## Video Tutorial
 
-https://youtu.be/zg-UNTQ4rMw
+[![ComfyUI Virtual Webcam](https://img.youtube.com/vi/zg-UNTQ4rMw/0.jpg)](https://youtu.be/zg-UNTQ4rMw)
 
 ## Install ComfyUI Virtual Webcam
 
