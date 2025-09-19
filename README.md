@@ -14,7 +14,7 @@ Then in your other webcam capable applications, such as Google Meet, Teams, Zoom
 
 ## Install ComfyUI Virtual Webcam
 
-To install the custom node `ComfyUI-Virtual-Webcam`, you can use your command/terminal prompt.
+Install the custom node **ComfyUI Virtual Webcam** using the manager, or you can use your command/terminal prompt.
 
 1. Navigate to your `ComfyUI/custom_nodes` folder.
 2. Run,
@@ -45,7 +45,7 @@ Or you can double click the workspace and search for `virtual`
 
 ![./img/run-instant.jpg](./img/tap-again.jpg)
 
-5. In your broadcasting or collaboration softwae, select `OBS Virtual Camera` as your webcam input.
+5. In your broadcasting or collaboration software, select `OBS Virtual Camera` as your webcam input.
 
 ![./img/select-obs.jpg](./img/select-obs.jpg)
 
