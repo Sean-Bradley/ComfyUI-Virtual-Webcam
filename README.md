@@ -14,7 +14,11 @@ Then in your other webcam capable applications, such as Google Meet, Teams, Zoom
 
 ## Install ComfyUI Virtual Webcam
 
-Install the custom node **ComfyUI Virtual Webcam** using the manager, or you can use your command/terminal prompt.
+Install the custom node **ComfyUI Virtual Webcam** using the manager,
+
+![](./img/manager-virtual-webcam.jpg)
+
+Or you can use your command/terminal prompt.
 
 1. Navigate to your `ComfyUI/custom_nodes` folder.
 2. Run,
