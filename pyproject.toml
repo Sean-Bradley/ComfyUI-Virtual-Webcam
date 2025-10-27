@@ -1,7 +1,7 @@
 [project]
 name = "virtual-webcam"
 description = "A Virtual Camera Output For ComfyUI. On Windows, it will use the OBS Virtual Camera driver. So make sure you have OBS installed. Then in your other webcam capable applications, such as Google Meet, Teams, Zoom and even OBS itself, you can connect to the OBS Virtual Camera option and see what you are outputting from ComfyUI."
-version = "1.0.0"
+version = "1.0.1"
 license = {file = "LICENSE"} 
 # classifiers = [
 #     # For OS-independent nodes (works on all operating systems)
@@ -29,8 +29,8 @@ Documentation = "https://github.com/Sean-Bradley/ComfyUI-Virtual-Webcam/wiki"
 
 [tool.comfy]
 PublisherId = "sbcode"
-DisplayName = "ComfyUI-Virtual-Webcam"
-Icon = ""
+DisplayName = "ComfyUI Virtual Webcam"
+Icon = "https://avatars.githubusercontent.com/u/59069470"
 includes = [] 
 # "requires-comfyui" = ">=1.0.0"  # ComfyUI version compatibility
 
