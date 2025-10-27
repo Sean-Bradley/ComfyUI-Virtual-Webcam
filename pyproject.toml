@@ -28,7 +28,7 @@ Documentation = "https://github.com/Sean-Bradley/ComfyUI-Virtual-Webcam/wiki"
 "Bug Tracker" = "https://github.com/Sean-Bradley/ComfyUI-Virtual-Webcam/issues"
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "sbcode"
 DisplayName = "ComfyUI-Virtual-Webcam"
 Icon = ""
 includes = [] 
